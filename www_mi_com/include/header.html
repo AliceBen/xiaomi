@@ -1,0 +1,50 @@
+<nav class="navbar navbar-default navbar-inverse">
+	<div class="container">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mitu">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">小米网</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="mitu">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">小米网</a></li>
+							<li><a href="#">MIUI</a></li>
+							<li><a href="#">米聊</a></li>
+							<li><a href="#">游戏</a></li>
+							<li><a href="#">多看阅读</a></li>
+							<li><a href="#">云服务</a></li>
+							<li><a href="#">小米网移动版</a></li>
+							<li><a href="#">问题反馈</a></li>
+							<li><a href="#">Select Region</a></li>
+						</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="login.html" id="welcome">登录</a></li>
+					<li><a href="register.html">注册</a></li>
+					<li class="top_shopping">
+						<a href="#"><i></i>购物车（<span>0</span>）
+							<div class="shopping_box">
+								<img ng-src="image/loading.gif"/>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</div>
+</nav>
+<script>
+	//localStorage.clear();
+	//sessionStorage
+	if(sessionStorage.length!==0){
+//	alert(sessionStorage.getItem("uname"));
+	$("#welcome").html(sessionStorage.getItem("uname"));
+	}
+</script>

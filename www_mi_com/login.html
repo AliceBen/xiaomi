@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <title>小米账号-登录</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <style>
+        nav{
+        	width:100%;
+        }
+        #log-img{
+        	width:1125px;
+        	margin:0 auto;
+        }
+        .center{
+        	background:url(image/login-bg.jpg);
+        	height: 588px;
+        	width:100%;
+		    position: absolute;
+		    left: 0;
+		    top: 98px;
+		    background-repeat: no-repeat;
+		    background-position: top center;
+        }
+        .form {
+		    width: 410px;
+		    height: 525px;
+		    background: #fff;
+		    float: right;
+		    margin: 33px 234px;
+		}
+		.text,
+		.lo-re,
+		.re-pas{
+			list-style-type:none;
+		}
+		.text li{
+			float:left;
+			font-size:24px;
+			margin-right: 59px;
+			cursor: pointer;
+			color: #666;
+		}
+		.form-main {
+		    width: 350px;
+		    height: 470px;
+		    margin: 25px auto;
+		}
+		span.xian {
+		    width: 1px;
+		    height: 24px;
+		    display: inline-block;
+		    background: #e0e0e0;
+		    margin: 4px 0px 0px -183px;
+		}
+		.active{
+			color:#f56600 !important;
+		}
+		.normal{
+			color:#666;
+		}
+		.inp {
+		    margin-top: 40px;
+		}
+		.inp input,
+		button{
+			width: 350px;
+			height: 50px;
+			display: inline-block;
+			margin-bottom: 15px;
+		    border: 1px #e0e0e0 solid;
+		}
+		button {
+	    margin-top: 15px;
+        background: #f56600;
+    	border: none;
+		}
+		button a{
+			color: #fff;
+		}
+		.lo-re,
+		.re-pas{
+			font-size: 14px;
+		}
+		ul.lo-re {
+	    float: left;
+	    padding: 0;
+		}
+		ul.lo-re li{
+			float: left;
+		}
+		ul.lo-re li a{
+			color: #f56600;
+		}
+		.re-pas{
+			float:right;
+		}
+		.re-pas li{
+			float: left;
+		}
+		ul.re-pas li a{
+			color: #666;
+		}
+		.oth_type_tit {
+	    border-top: 1px solid #e0e0e0;
+	    padding-top: 10px;
+	    font-size: 12px;
+		}
+		legend.oth_type_txt {
+	    font-size: 14px;
+	    color: #666;
+		}
+		.qita {
+    	margin-top: 100px;
+		}
+		.left{
+			/*display: none;*/
+		}
+		.right{
+			display: none;
+		}
+		.right .img {
+		    position: relative;
+		    margin-top: 105px;
+		    margin-left: 85px;
+		}
+		p.APP {
+		    margin-left: 96px;
+		    margin-top: 15px;
+		}
+		p.shux {
+		    margin-left: 27px;
+		    margin-top: -12px;
+		}
+		.shopApp {
+		    color: #666;
+		}
+		.span-app{
+			color: #f56600 !important;
+		}
+    </style>
+</head>
+<body>
+<nav>
+<div id="log-img">
+	<a href="index.html"><img src="image/mistore_logo.png"></a>
+</div>
+</nav>
+<div class="center">
+	<div class="form" style="
+    margin-left: 0px;">
+		<div class="form-main">
+		<ul class="text">
+			<li class="active">账号登录</li>
+			<span class="xian"></span>
+			<li class="normal">扫码登录</li>
+		</ul>
+		<div class="left">
+		<div class="inp">
+			<input type="text" name="" placeholder="  邮箱/手机号码/小米ID">
+			<input type="text" name="" placeholder="  密码">
+			<button><a href="">登录</a></button>
+		</div>
+		<ul class="lo-re">
+			<li><a href="">手机短信登录/</a></li>
+			<li><a href="register.html">注册</a></li>
+		</ul>
+		<ul class="re-pas">
+			<li><a href="">立即注册&nbsp;|&nbsp;</a></li>
+			<span class="zhongx"></span>
+			<li><a href="">忘记密码</a></li>
+		</ul>
+		<div class="qita">
+		<fieldset class="oth_type_tit">
+        	<legend align="center" class="oth_type_txt">其他方式登录</legend>
+        </fieldset>
+	</div>
+	</div>
+	<div class="right">
+		<div class="img">
+			<img src="image/erweim.png">
+		</div>
+		<div class="shopApp">
+			<p class="APP">使用<span class="span-app">小米商城APP</span>扫一扫</p>
+			<p class="shux">小米手机可打开「设置」>「小米帐号」扫码登录</p>
+		</div>
+	</div>
+	</div>
+	</div>
+</div>
+</body>
+ <script src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".normal").click(function(){
+			$("li:first").removeClass("active");
+			$(".normal").addClass("active");
+			$(".left").css('display','none');
+			$(".right").css('display','block');
+		});
+		$("li:first").click(function(){
+			$(".normal").removeClass("active");
+			$("li:first").addClass("active");
+			$(".right").css('display','none');
+			$(".left").css('display','block')
+		});
+	});
+</script>
+<script src="js/login.js"></script>
+<script SRC="js/mi.js"></script>
+</HTML>
